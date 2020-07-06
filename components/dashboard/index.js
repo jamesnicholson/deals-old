@@ -3,18 +3,20 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 import {ThemeContext}  from '../../utils/context'
 import { useLazyQuery } from '@apollo/react-hooks';
 import { GET_CATEGORIES }  from '../../apollo/queries'
-import Deal from '../deal'
+
 
 
 export default Dashboard = ({navigation}) => {
+
     const {country} = useContext(ThemeContext);
     const {deals, setDeals} = useContext(ThemeContext);
+
     const [getDealsByCountry, {loading, data }] = useLazyQuery(GET_CATEGORIES, {
       fetchPolicy: "no-cache",
-      variables: {country: country ? country : "EBAY-AU" },
+      variables: { country: country ? country : "EBAY-AU" },
     })
 
-    const updateDeals = () =>{
+    const updateDeals = () => {
         getDealsByCountry()
         setDeals(data)
     }
@@ -25,6 +27,7 @@ export default Dashboard = ({navigation}) => {
             console.log("data :" + data)
         }
     },[data])
+
     return <Container>
         <Header>
             <Left>

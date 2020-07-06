@@ -17,7 +17,7 @@ export const GET_CATEGORIES = gql`
 `
 export const GET_DEALS_BY_CATEGORY = gql`
   query getDealsByCategory($country: String!, $category: String! ) {
-        dealsByCategory(category:"260010" country:$category, limit:3) {
+        dealsByCategory(category:"260010" country:$country, limit:3) {
             itemId,
             title,
             price
@@ -26,7 +26,7 @@ export const GET_DEALS_BY_CATEGORY = gql`
 `
 export const GET_DEALS_BY_COUNTRY = gql`
   query getDealsByCountry($country: String!) {
-    deals(country : $country, limit:2) {
+    deals(country: $country, limit:2) {
         itemId,
         title,
         price
