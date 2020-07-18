@@ -29,7 +29,15 @@ export const GET_DEALS_BY_COUNTRY = gql`
     deals(country: $country, limit:2) {
         itemId,
         title,
-        price
+        url,
+        endsAt,
+        currency,
+        price,
+        originalPrice,
+        discountPercentage,
+        quantity,
+        shippingCost,
+        dealUrl
     }
   }
 `

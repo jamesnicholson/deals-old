@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import  Deals  from '../deals'
 import  Categories  from '../categories'
 import  Countries  from '../countries'
 export default Dashboard = ({navigation}) => {
@@ -16,10 +17,11 @@ export default Dashboard = ({navigation}) => {
             </Body>
             <Right />
         </Header>
-        <Content>
-            <Categories />
-            <Countries />
-        </Content>
+        <><Deals /></>
+     
+        <Categories />
+        <Countries />
+            
         <Footer>
             <FooterTab>
             <Button full>
