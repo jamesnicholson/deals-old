@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
 import  Categories  from '../categories'
+import  Countries  from '../countries'
 export default Dashboard = ({navigation}) => {
 
     return <Container>
@@ -17,6 +18,7 @@ export default Dashboard = ({navigation}) => {
         </Header>
         <Content>
             <Categories />
+            <Countries />
         </Content>
         <Footer>
             <FooterTab>

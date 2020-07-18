@@ -11,8 +11,18 @@ const Categories = () =>  {
       variables: { country: country ? country : "EBAY-AU" },
     });
   const Loader = () => <Spinner color='green' />
-  const CategoriesList = () => <List>{ typeof data.categories !== "undefined" ? data.categories.map((item, index) => <ListItem key={index}><Text>{item.name}</Text></ListItem>) : null}</List>
-                    
+  const CategoriesList = () => <List> 
+                                  { typeof data.categories !== "undefined" ? 
+                                      data.categories.map((item, index) => <ListItem key={index}>
+                                                                              <Text>{item.name}</Text>
+                                                                            </ListItem>) 
+                                  : null } 
+                            </List>
+             
+  
+
+
+
   return  <Content>
             {loading ? Loader() : CategoriesList()}
           </Content>
