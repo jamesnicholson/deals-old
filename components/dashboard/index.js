@@ -7,27 +7,25 @@ export default Dashboard = ({navigation}) => {
 
     return <Container>
             <Header>
-            <Left>
-            <Button transparent>
-                <Icon name='menu' />
-            </Button>
-            </Left>
-            <Body>
-            <Title>Header</Title>
-            </Body>
-            <Right />
-        </Header>
-        <><Deals /></>
-     
-        <Categories />
-        <Countries />
-            
-        <Footer>
-            <FooterTab>
-            <Button full>
-                <Text>Footer</Text>
-            </Button>
-            </FooterTab>
-        </Footer>
-    </Container>
+                <Left>
+                    <Button transparent onPress={()=> {console.log("D"); navigation.toggleDrawer()}}>
+                        <Icon name='menu' />
+                    </Button>
+                </Left>
+                <Body>
+                    <Title>Header</Title>
+                </Body>
+                <Right />
+            </Header>
+
+            <Deals />
+        
+            <Footer>
+                <FooterTab>
+                <Button full>
+                    <Text>Footer</Text>
+                </Button>
+                </FooterTab>
+            </Footer>
+        </Container>
 };

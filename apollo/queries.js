@@ -26,11 +26,12 @@ export const GET_DEALS_BY_CATEGORY = gql`
 `
 export const GET_DEALS_BY_COUNTRY = gql`
   query getDealsByCountry($country: String!) {
-    deals(country: $country, limit:2) {
+    deals(country: $country, limit:5) {
         itemId,
         title,
         url,
         endsAt,
+        image225,
         currency,
         price,
         originalPrice,
