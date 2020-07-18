@@ -9,7 +9,8 @@ import Dashboard  from './components/dashboard'
 export default App = () => {
    const [country, setCountry] = useState("EBAY-AU");
    const [deals, setDeals] = useState(null);
-   const themeValue = useMemo(() => ({ country, setCountry, deals, setDeals}), [country, setCountry, deals, setDeals]);
+   const [category, setCategory] = useState(null);
+   const themeValue = useMemo(() => ({ country, setCountry, deals, setDeals, category, setCategory}), [country, setCountry, deals, setDeals, category, setCategory]);
    const Stack = createStackNavigator();
    return   <ApolloProvider client={client}>
                <ThemeContext.Provider value={themeValue}>

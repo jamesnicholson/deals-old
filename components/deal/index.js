@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
-export default class Deal extends Component {
-  render() {
-    return (
+export default Deal = ({navigation}) => {
+    return 
       <Container>
         <Header />
         <Content>
@@ -40,6 +39,5 @@ export default class Deal extends Component {
           </Card>
         </Content>
       </Container>
-    );
-  }
-}
+  
+  };
