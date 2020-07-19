@@ -12,24 +12,24 @@ const Navbar = ({navigation}) => {
                     <Title>Deals</Title>
                 </Body>
                 <Right>
-                    <Button transparent onPress={()=>console.log("show bottom  drawer")}>
+                    <Button transparent onPress={()=>navigation.navigate('Filter')}>
                         <Icon name='filter' size={30} color="#000"  />
                     </Button>
-                    <Button transparent onPress={()=>console.log("My Favorties")}>
+                    <Button transparent onPress={()=> console.log("Show my favourites")}>
                         <Icon name='heart' size={30} color="#000"  />
                     </Button>
                 </Right>
             </Header>
 }
-export const NavbarBottom = ({navigation}) => {
-   return <Footer>
-            <FooterTab>
-  
-            </FooterTab>
-        </Footer>
+export const NavbarSecondary = ({navigation}) => {
+   return  <Header> 
+                <Right>      
+                    <Button transparent onPress={()=> navigation.goBack()}>
+                        <Icon name='close' size={30} color="#000"  />
+                    </Button>
+                </Right>
+           </Header>
 }
-
-
 export default Navbar
 
 
