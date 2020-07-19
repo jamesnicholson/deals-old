@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect} from 'react';
 import {ThemeContext}  from '../../utils/context'
 import {Image} from 'react-native'
-import { Card, CardItem, Text, Body} from 'native-base';
+import CountDown from './countdown'
+import { Card, CardItem, Text, Body, Right, ListItem} from 'native-base';
 const Deal = ({data}) =>  {
   const { itemId,
           title,
@@ -16,6 +17,7 @@ const Deal = ({data}) =>  {
           shippingCost,
           dealUrl } = data
 
+
   return  <Card style={{flex: 0}}>
             <CardItem>
               <Body>
@@ -24,6 +26,23 @@ const Deal = ({data}) =>  {
                 {title}
                 </Text>
               </Body>
+              <Right>
+                <ListItem>
+                    <Text>
+                      Deal ends {<CountDown endsAt={endsAt} />}
+                    </Text>
+                </ListItem>
+                <ListItem>
+                    <Text>
+                      {currency} {price}
+                    </Text>
+                </ListItem>
+                <ListItem>
+                    <Text>
+                      {currency} {price}
+                    </Text>
+                </ListItem>
+              </Right>
             </CardItem>
           
           </Card>
