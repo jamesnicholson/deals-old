@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import {ThemeContext} from './utils/context'
 import client from './apollo/client'
 import Feed from './components/feed'
-import Settings from './components/settings'
+import Filter from './components/filter'
 export default App = () => {
    const [country, setCountry] = useState("EBAY-AU")
    const [deals, setDeals] = useState(null)
@@ -19,9 +19,10 @@ export default App = () => {
                                        initialRouteName="Feed"
                                        headerMode="none" 
                                        animation="slide">
+
                         <Stack.Screen name="Feed" component={Feed} />
-                        <Stack.Screen name="Settings" 
-                                       component={Settings}
+                        <Stack.Screen name="Filter" 
+                                       component={Filter}
                                        drawerStyle={{
                                           backgroundColor: '#c6cbef',
                                           width: 240,

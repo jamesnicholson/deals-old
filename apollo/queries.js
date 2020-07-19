@@ -3,6 +3,7 @@ export const GET_COUNTRIES = gql`
     query {
         countries {
             id,
+            gloalId,
             name
         }
     }
