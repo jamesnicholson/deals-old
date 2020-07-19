@@ -18,7 +18,7 @@ export default App = () => {
                      <Stack.Navigator screenOptions={{gestureEnabled: true, gestureDirection:"horizontal"}} 
                                        initialRouteName="Feed"
                                        headerMode="none" 
-                                       animation="fade">
+                                       animation="slide">
                         <Stack.Screen name="Feed" component={Feed} />
                         <Stack.Screen name="Settings" 
                                        component={Settings}
