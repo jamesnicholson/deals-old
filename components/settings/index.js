@@ -5,6 +5,7 @@ import  Countries  from '../countries'
 const Settings = ({navigation}) => {
 
     return  <Container>
+                <Text>Hello Settings</Text>
                 <Countries />
                 <Categories />
             </Container>
