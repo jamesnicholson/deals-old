@@ -11,7 +11,6 @@ export const GET_COUNTRIES = gql`
 export const GET_CATEGORIES = gql`
     query {
         categories {
-            id,
             name
         }
     }

@@ -33,7 +33,7 @@ const CountDown = ({endsAt}) => {
         }
     
         timerComponents.push(
-          <Text>
+          <Text key ={interval}>
             {timeLeft[interval]} {interval}{" "}
           </Text>
         );

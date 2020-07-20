@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import Icon from 'react-native-vector-icons/AntDesign'
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Text } from 'native-base';
+import Filter from '../filter'
 const Navbar = ({navigation}) => {
     return <Header style={{backgroundColor:'#00000070'}}>
                 <Left>
@@ -11,10 +12,8 @@ const Navbar = ({navigation}) => {
                 <Body>
                     <Title>Deals</Title>
                 </Body>
+                <Filter />
                 <Right>
-                    <Button transparent onPress={()=>navigation.navigate('Filter')}>
-                        <Icon name='filter' size={30} color="#000"  />
-                    </Button>
                     <Button transparent onPress={()=> console.log("Show my favourites")}>
                         <Icon name='heart' size={30} color="#000"  />
                     </Button>

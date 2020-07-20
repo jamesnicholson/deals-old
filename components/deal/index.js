@@ -23,28 +23,30 @@ const Deal = ({data}) =>  {
               <Body>
                 <Image source={{uri: image225}} style={{height: 200, width: 200, flex: 1}}/>
                 <Text>
-                {title}
+                  {title}
                 </Text>
               </Body>
               <Right>
-                <ListItem>
+                <ListItem key={1}>
                     <Text>
                       Deal ends {<CountDown endsAt={endsAt} />}
                     </Text>
                 </ListItem>
-                <ListItem>
+                <ListItem key={2}>
                     <Text>
                       {currency} {price}
                     </Text>
-                </ListItem>
-                <ListItem>
                     <Text>
-                      {currency} {price}
+                      {currency} {originalPrice}
+                    </Text>   
+                </ListItem>
+                <ListItem key={3}>
+                    <Text>
+                      {discountPercentage}%
                     </Text>
                 </ListItem>
               </Right>
             </CardItem>
-          
           </Card>
 }
 export default Deal;
